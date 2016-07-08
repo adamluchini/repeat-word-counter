@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Xunit;
+// using System.Text.RegularExpressions;
 
 namespace RepeatCounter.Objects
 {
@@ -9,42 +10,50 @@ namespace RepeatCounter.Objects
     [Fact]
     public void CountRepeats_InputWordFindsExactMatchInInputSentenceOnce_1()
     {
-    string inputSentence = "Tia and Tamera";
     string inputWord = "Tia";
-    Assert.Equal(1, RepeatCounter.CountRepeats(inputSentence, inputWord));
+    string inputSentence = "Tia and Tamera";
+    Assert.Equal(1, RepeatCounter.CountRepeats(inputWord, inputSentence));
     }
 
     [Fact]
     public void CountRepeats_InputWordDoesNotFindMatchInInputSentece_0()
     {
-      string inputSentence = "Tia and Tamera";
       string inputWord = "Urkle";
-      Assert.Equal(0, RepeatCounter.CountRepeats(inputSentence, inputWord));
+      string inputSentence = "Tia and Tamera";
+      Assert.Equal(0, RepeatCounter.CountRepeats(inputWord, inputSentence));
     }
 
     [Fact]
     public void CountRepeats_InputWordFindsExactMatchInInputSentenceMultipleTimes_2()
     {
-      string inputSentence = "Sister Sister starring Tia and Tamera";
       string inputWord = "Sister";
-      Assert.Equal(2, RepeatCounter.CountRepeats(inputSentence, inputWord));
+      string inputSentence = "Sister Sister starring Tia and Tamera";
+      Assert.Equal(2, RepeatCounter.CountRepeats(inputWord, inputSentence));
     }
 
     [Fact]
     public void CountRepeats_InputWordFindsMatchInInputSentenceRegardlessOfCase_2()
     {
-      string inputSentence = "Sister Sister starring Tia and Tamera";
       string inputWord = "sister";
-      Assert.Equal(2, RepeatCounter.CountRepeats(inputSentence, inputWord));
+      string inputSentence = "Sister Sister starring Tia and Tamera";
+      Assert.Equal(2, RepeatCounter.CountRepeats(inputWord, inputSentence));
     }
 
     [Fact]
     public void CountRepeats_InputWordFindsMatchInInputSentecesRegardlessOfPunctuation_2()
     {
-      string inputSentence = "'SISTER, SISTER!!!!' starring Tia and Tamera";
       string inputWord = "sister";
-      Assert.Equal(2, RepeatCounter.CountRepeats(inputSentence, inputWord));
+      string inputSentence = "'SISTER, SISTER!!!!' starring Tia and Tamera";
+      Assert.Equal(2, RepeatCounter.CountRepeats(inputWord, inputSentence));
     }
+
+    // [Fact]
+    // public void CountRepeats_InputWordDoesNotFindMatchInInputSentenceIfPartialMatch_0()
+    // {
+    //   string inputSentence = "Sister, Sister starring Tia and Tamera";
+    //   string inputWord = "star";
+    //   Assert.Equal(0, RepeatCounter.CountRepeats(inputSentence, inputWord));
+    // }
 
   }
 }
