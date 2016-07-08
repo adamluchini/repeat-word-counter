@@ -12,7 +12,7 @@ _See text file in repository_
 ## Setup/Installation Requirements
 
 * _Clone this repository_
-* _Open Windows Powershell_
+* _Open Windows PowerShell_
 * _Navigate to project folder_
 * _Run dnu restore in the command line_
 * _Run dnx kestrel in the command line_
@@ -20,7 +20,10 @@ _See text file in repository_
 
 ## Technologies Used
 
-_C# with Nancy 1.3.0 and Razor 1.3.0 web framework;_
+* _C#_
+* _Nancy 1.3.0_
+* _Razor 1.3.0_
+* _xunit 2.1.0_
 
 ### Legal
 
