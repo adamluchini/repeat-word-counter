@@ -38,5 +38,13 @@ namespace RepeatCounter.Objects
       Assert.Equal(2, RepeatCounter.CountRepeats(inputSentence, inputWord));
     }
 
+    [Fact]
+    public void CountRepeats_InputWordFindsMatchInInputSentecesRegardlessOfPunctuation_2()
+    {
+      string inputSentence = "'SISTER, SISTER!!!!' starring Tia and Tamera";
+      string inputWord = "sister";
+      Assert.Equal(2, RepeatCounter.CountRepeats(inputSentence, inputWord));
+    }
+
   }
 }
