@@ -15,7 +15,7 @@ namespace RepeatCounter.Objects
       string[] sentenceArray = inputSentence.Split(' ');
       for (var i = 0; i < sentenceArray.Length; i++)
       {
-        if (sentenceArray[i].Contains(inputWord))
+        if (sentenceArray[i].ToLower().Contains(inputWord.ToLower()))
         {
           repeatCount += 1;
         }

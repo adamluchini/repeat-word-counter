@@ -23,10 +23,18 @@ namespace RepeatCounter.Objects
     }
 
     [Fact]
-    public void CountRepeats_InputWordFindsExcactMatchInInputSentenceMultipleTimes_2()
+    public void CountRepeats_InputWordFindsExactMatchInInputSentenceMultipleTimes_2()
     {
       string inputSentence = "Sister Sister starring Tia and Tamera";
       string inputWord = "Sister";
+      Assert.Equal(2, RepeatCounter.CountRepeats(inputSentence, inputWord));
+    }
+
+    [Fact]
+    public void CountRepeats_InputWordFindsMatchInInputSentenceRegardlessOfCase_2()
+    {
+      string inputSentence = "Sister Sister starring Tia and Tamera";
+      string inputWord = "sister";
       Assert.Equal(2, RepeatCounter.CountRepeats(inputSentence, inputWord));
     }
 
