@@ -1,0 +1,21 @@
+Specifications:
+
+-Sentence Input: "Tia and Tamera"//Word Input: "Tia"
+-Output: "Times "Tia" shows up: 1"
+(Why: Check if our method is able to find an exact match with one word.)
+
+-Sentence Input: "Tia and Tamera are twin sisters"//Word Input: "sister"
+-Output: "Times "sister" shows up: 0"
+(Why: Check if our method only returns exact matches.)
+
+-Sentence Input: "Sister Sister with Tia and Tamera"//Word Input: "Sister"
+-Output: "Times "Sister" shows up: 2"
+(Why: Check if our method returns multiple instances of an exact match)
+
+-Sentence Input: "Sister Sister with Tia and Tamera"//Word Input: "sister"
+-Output: "Times "sister" shows up: 2"
+(Why: Check if our method returns multiple instances regardless of case)
+
+-Sentence Input: ""Sister, Sister" with Tia and Tamera"//Word Input: "sister"
+-Output: "Times "sister" shows up: 2"
+(Why: Check if our method returns multiple instances regardless of punctuation)
